@@ -1,0 +1,23 @@
+.postarea {
+    max-width: 800px;
+    margin: 8px auto;
+    padding: 1rem 2rem;
+    background-color: rgb(72, 37, 52);
+    border-radius: 20px;
+}
+.titlepost {
+    margin: 3px;
+    font-size: 20px;
+    font-weight: 900; 
+}
+.textpost {
+    max-width: 800px;
+}
+
+.posts {
+    margin-top: 2rem;
+    max-height: 75vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-behavior: none;
+}
