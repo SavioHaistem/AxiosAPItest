@@ -1,4 +1,4 @@
-import config from "../axios/config";
+import configs from "../axios/config";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import './Home.css';
@@ -10,7 +10,7 @@ const Home = () => {
 
     const getPosts = async() => {
         try {
-            const response = await config.get("/posts");
+            const response = await configs.get("/posts");
             
             const data = response.data;
             setPosts(data)

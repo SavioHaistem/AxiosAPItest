@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const config = axios.create({
+const configs = axios.create({
     baseURL: "https://jsonplaceholder.typicode.com",
     headers: {
         "Content-Type": "application/json",
@@ -8,4 +8,4 @@ const config = axios.create({
     }
 })
 
-export default config;
+export default configs;
