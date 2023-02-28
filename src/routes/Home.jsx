@@ -1,4 +1,4 @@
-import axios from "axios";
+import config from "../axios/config";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import './Home.css';
@@ -10,11 +10,11 @@ const Home = () => {
 
     const getPosts = async() => {
         try {
-            const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
+            const response = await config.get("/posts");
             
             const data = response.data;
             setPosts(data)
-            console.log(data)
+
         } catch (error) {
             console.log(error)
         }
@@ -23,20 +23,17 @@ const Home = () => {
 
     return(
         <>
-            <h1>Ultimos Posts</h1>
+            <h1 className="title"> Ultimos Posts </h1>
             <div className="posts"> 
-                {   
-                    posts.length === 0 ? <h1>Nenhum Post disponivel</h1> : 
-                    posts.map(post =>
-                        <div className="postarea">
-                            <div className="titlepost">
-                                {post.title}
-                            </div>
-                            <div className="textpost">
-                                {post.body}
-                            </div>
+                { posts.length === 0 ? (<p>Carregando</p>) : posts.map(
+                    (post) => (
+                        <div className="postarea" key={post.id}>
+                            <h2 className="titlepost">{post.title}</h2>
+                            <p className="textpost">{post.body}</p>
+                            <Link className={'more'} to={`/${post.id}`}> Ler mais </Link>
                         </div>
-                )} 
+                    )
+                )}
             </div>
 
         </>

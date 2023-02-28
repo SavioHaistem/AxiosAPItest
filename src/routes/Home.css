@@ -12,6 +12,7 @@
 }
 .textpost {
     max-width: 800px;
+    padding-bottom: 10px;
 }
 
 .posts {
@@ -20,4 +21,10 @@
     overflow: scroll;
     overflow-x: hidden;
     scroll-behavior: none;
+}
+.postarea h2::first-letter {
+    text-transform: uppercase;
+}
+.title {
+    text-align: center;
 }

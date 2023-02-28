@@ -1,0 +1,52 @@
+.newpost {
+    padding: 3rem 5rem;
+}
+.newpost h2 {
+    text-align: center;
+}
+.newpost .formcontroll {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 8px;
+}
+.formcontroll .button {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 80px;
+    max-width: 100px;
+    height: 30px;
+    transition: 0.3s;
+}
+.formcontroll .button:hover {
+    cursor: pointer;
+}
+.formcontroll .transparent {
+    border-radius: 0.2rem;
+    outline: none;
+    border: none;
+    background-color: rgba(36, 0, 60, 0.364);
+}
+.formcontroll .downbar {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.426);
+    padding: 1rem 1rem 0.5rem;
+    transition: 0.3s;
+}
+.formcontroll .downbar:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+.formcontroll #title {
+    color: rgb(202, 202, 202);
+    height: 30px;
+    width: 300px;
+}
+.formcontroll #body {
+    color: rgb(228, 228, 228);
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 100px;
+    max-height: 100px;
+}
+.formcontroll title {
+    
+}
